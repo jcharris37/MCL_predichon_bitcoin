@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Predicción de Bitcoin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🔮 Predicción del Precio de Bitcoin</h1>
+    <form id="predictionForm">
+      <div class="form-group">
+        <label>Open:<input type="number" step="any" name="Open" required></label>
+        <label>High:<input type="number" step="any" name="High" required></label>
+        <label>Low:<input type="number" step="any" name="Low" required></label>
+        <label>Volume:<input type="number" step="any" name="Volume" required></label>
+        <label>MA_7:<input type="number" step="any" name="MA_7" required></label>
+      </div>
+      <button type="submit">Predecir</button>
+    </form>
+    <div id="result"></div>
+    <canvas id="predictionChart" width="800" height="350"></canvas>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
